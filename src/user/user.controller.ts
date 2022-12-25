@@ -23,7 +23,7 @@ export class UserController {
   @UseGuards(JwtAuthGuards)
   @Get()
   findAll() {
-    return this.userService.getAllUsers();  //Чуть позже поменяю
+    return this.userService.getAllUsers();  
   }
 
   @ApiOperation({summary: "Get info about user"})

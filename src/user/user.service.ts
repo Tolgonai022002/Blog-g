@@ -11,7 +11,7 @@ import { BadRequestException } from '@nestjs/common/exceptions';
 export class UserService {
   constructor(
     @InjectRepository(User)private userRepo: Repository<User>,
-     // forwardRef прочитала в гугле что так надо чтобы ошибок не было, но надо еще посмотреть какие выходы могут быть
+
     // @Inject(forwardRef(() => AuthService)) 
     //     private readonly authService: AuthService,
   ) {}
@@ -74,23 +74,5 @@ export class UserService {
   //   }
   //   return oneOfUsers
   // }
-
-
-
-  // update(id: number, updateUserDto: UpdateUserDto) {
-  //   return `This action updates a #${id} user`;
-  // }
-
-  // remove(id: number) {
-  //   return `This action removes a #${id} user`;
-  // }
-
-  // async getUserByLogin(login: string){
-  //   const user = await this.userRepository.findOne({where:{login}})
-  //   return user
-  // }
-
-  //  Мне кжеься тут надо еще дополнить , но я пока не уверена
-
 
 }
